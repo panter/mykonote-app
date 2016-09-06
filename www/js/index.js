@@ -18,52 +18,52 @@
  */
 
 var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        $.ajax({
-          url: '/users/is_authenticated',
-          method: 'GET',
-          dataType: 'json',
-        })
-        .done(function(data, status, xhr){
-          location.href = 'notes.html';
-        })
-        .fail(function(jqXHR, textStatus, errorThrown) {
-          $('.js-login-section').show();
-        });
+  // Application Constructor
+  initialize: function() {
+    this.bindEvents();
+  },
+  // Bind Event Listeners
+  //
+  // Bind any events that are required on startup. Common events are:
+  // 'load', 'deviceready', 'offline', and 'online'.
+  bindEvents: function() {
+    document.addEventListener('deviceready', this.onDeviceReady, false);
+  },
+  // deviceready Event Handler
+  //
+  // The scope of 'this' is the event. In order to call the 'receivedEvent'
+  // function, we must explicitly call 'app.receivedEvent(...);'
+  onDeviceReady: function() {
+    $.ajax({
+      url: '/users/is_authenticated',
+      method: 'GET',
+      dataType: 'json',
+    })
+    .done(function(data, status, xhr){
+      location.href = 'notes.html';
+    })
+    .fail(function(jqXHR, textStatus, errorThrown) {
+      $('.js-login-section').show();
+    });
 
-        // after login
-        $(document).off('mykonote.afterLogin').on('mykonote.afterLogin', function(e, data) {
-          location.href = 'notes.html';
-        });
+    // after login
+    $(document).off('mykonote.afterLogin').on('mykonote.afterLogin', function(e, data) {
+      location.href = 'notes.html';
+    });
 
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+    app.receivedEvent('deviceready');
+  },
+  // Update DOM on a Received Event
+  receivedEvent: function(id) {
+    var parentElement = document.getElementById(id);
+    var listeningElement = parentElement.querySelector('.listening');
+    var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
 
-        console.log('Received Event: ' + id);
-    }
+    console.log('Received Event: ' + id);
+  }
 };
 
 app.initialize();
