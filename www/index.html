@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+  http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
 -->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <!-- <meta http&#45;equiv="Content&#45;Security&#45;Policy" content="default&#45;src 'self' data: gap: https://ssl.gstatic.com 'unsafe&#45;eval'; style&#45;src 'self' 'unsafe&#45;inline'; media&#45;src *"> -->
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/application.css">
-        <title>Mykonote</title>
-    </head>
-    <body>
-        <div class="js-login-section" style="display: none;">
-          <div class="container-fluid"><div data-react-props="{&quot;message&quot;:null}" data-react-class="NoticeFlash"><!-- react-empty: 1 --></div><div data-react-props="{&quot;message&quot;:&quot;You need to sign in or sign up before continuing.&quot;}" data-react-class="AlertFlash"><div data-reactroot="" class="row"><div class="col-md-4 col-md-offset-4"><div class="alert alert-dismissible alert-warning"><button class="close" type="button">×</button><!-- react-text: 5 -->You need to sign in or sign up before continuing.<!-- /react-text --></div></div></div></div><div class="row"><div class="col-md-6 col-md-offset-3"><div class="well"><h2>Log in</h2><div data-react-props="{}" data-react-class="LoginForm"><form data-reactroot="" class="simple_form new_user"><input type="hidden" value="✓" name="utf8"><div class="form-inputs"><div class="form-group email optional user_email is-empty"><label for="user_email" class="email optional control-label">Email</label><input type="email" id="user_email" name="user[email]" class="string email optional form-control"><span class="material-input"></span></div><div class="form-group password optional user_password is-empty"><label for="user_password" class="password optional control-label">Password</label><input type="password" id="user_password" name="user[password]" class="password optional form-control"><span class="material-input"></span></div><div class="form-group boolean optional user_remember_me"><div class="checkbox"><label for="user_remember_me" class="boolean optional"><input type="checkbox" id="user_remember_me" name="user[remember_me]" class="boolean optional"><span class="checkbox-material"><span class="check"></span></span><!-- react-text: 14 -->Remember me<!-- /react-text --></label></div></div></div><div class="form-actions"><input type="submit" class="btn btn-raised btn-primary btn-info" value="Log in" name="commit"></div></form></div><a href="/users/sign_up">Sign up</a><br><a href="/users/password/new">Forgot your password?</a><br></div></div></div></div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/application.js"></script>
-        <script type="text/javascript" src="js/setup.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+  <head>
+    <!--
+      Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+      Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+      * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <!-- <meta http&#45;equiv="Content&#45;Security&#45;Policy" content="default&#45;src 'self' data: gap: https://ssl.gstatic.com 'unsafe&#45;eval'; style&#45;src 'self' 'unsafe&#45;inline'; media&#45;src *"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+    <title>Mykonote</title>
+  </head>
+  <body>
+    <div class="js-login-section" style="display: none;">
+      <div class="container-fluid"><div data-react-props="{&quot;message&quot;:null}" data-react-class="NoticeFlash"><!-- react-empty: 1 --></div><div data-react-props="{&quot;message&quot;:&quot;You need to sign in or sign up before continuing.&quot;}" data-react-class="AlertFlash"><div data-reactroot="" class="row"><div class="col-md-4 col-md-offset-4"><div class="alert alert-dismissible alert-warning"><button class="close" type="button">×</button><!-- react-text: 5 -->You need to sign in or sign up before continuing.<!-- /react-text --></div></div></div></div><div class="row"><div class="col-md-6 col-md-offset-3"><div class="well"><h2>Log in</h2><div data-react-props="{}" data-react-class="LoginForm"><form data-reactroot="" class="simple_form new_user"><input type="hidden" value="✓" name="utf8"><div class="form-inputs"><div class="form-group email optional user_email is-empty"><label for="user_email" class="email optional control-label">Email</label><input type="email" id="user_email" name="user[email]" class="string email optional form-control"><span class="material-input"></span></div><div class="form-group password optional user_password is-empty"><label for="user_password" class="password optional control-label">Password</label><input type="password" id="user_password" name="user[password]" class="password optional form-control"><span class="material-input"></span></div><div class="form-group boolean optional user_remember_me"><div class="checkbox"><label for="user_remember_me" class="boolean optional"><input type="checkbox" id="user_remember_me" name="user[remember_me]" class="boolean optional"><span class="checkbox-material"><span class="check"></span></span><!-- react-text: 14 -->Remember me<!-- /react-text --></label></div></div></div><div class="form-actions"><input type="submit" class="btn btn-raised btn-primary btn-info" value="Log in" name="commit"></div></form></div><a href="/users/sign_up">Sign up</a><br><a href="/users/password/new">Forgot your password?</a><br></div></div></div></div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/setup.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
