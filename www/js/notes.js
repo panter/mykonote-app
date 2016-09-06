@@ -34,23 +34,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        $.ajax({
-          url: '/users/is_authenticated',
-          method: 'GET',
-          dataType: 'json',
-        })
-        .done(function(data, status, xhr){
-          location.href = 'notes.html';
-        })
-        .fail(function(jqXHR, textStatus, errorThrown) {
-          $('.js-login-section').show();
-        });
-
-        // after login
-        $(document).off('mykonote.afterLogin').on('mykonote.afterLogin', function(e, data) {
-          location.href = 'notes.html';
-        });
-
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
