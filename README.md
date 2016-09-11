@@ -29,6 +29,11 @@ To get the application started the following steps are required.
 
 * [Install Cordova](https://cordova.apache.org/docs/en/latest/guide/cli/index.html)
 
+The main JavaScript and CSS files (`application.js` and `application.css`) are
+from [the main Mykonote web application](https://github.com/panter/mykonote).
+To update them invoke `rake mobile:assets:copy` within [the main Mykonote web
+application](https://github.com/panter/mykonote).
+
 ## License
 
     Copyright 2016 Panter AG <info@panter.ch>
