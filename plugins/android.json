@@ -9,7 +9,20 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.mykonote"
+        },
+        "com.napolitano.cordova.plugin.intent": {
+            "PACKAGE_NAME": "com.mykonote"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.mykonote"
+        },
+        "cordova-plugin-image-resizer": {
+            "PACKAGE_NAME": "com.mykonote"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.mykonote"
+        }
+    }
 }
