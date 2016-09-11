@@ -16,6 +16,7 @@
         <param name="android-package" value="com.raananw.ImageResizePlugin" />
     </feature>
     <allow-intent href="market:*" />
+    <preference name="AndroidLaunchMode" value="singleInstance" />
     <name>Mykonote</name>
     <description>
     </description>
