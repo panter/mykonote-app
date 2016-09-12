@@ -21,7 +21,9 @@ ShareTo.prototype.handleIntent = function(intent) {
       return item.text;
     });
 
-    EventHive.publish('note.receive_new', { content: text.join('<br>') });
+    var title = intent.extras['android.intent.extra.TITLE'];
+
+    EventHive.publish('note.receive_new', { title: title, content: text.join('<br>') });
   }
   else if (intent.type.startsWith('image/')) {
     EventHive.publish('spinner.toggle', { show: true });
