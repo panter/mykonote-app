@@ -17,13 +17,10 @@ ShareTo.prototype.handleIntent = function(intent) {
   }
 
   if (intent.type === 'text/plain') {
-    var text = intent.clipItems.map(function(item) {
-      return item.text;
-    });
+    var title = intent.extras['android.intent.extra.SUBJECT'];
+    var content = intent.extras['android.intent.extra.TEXT'];
 
-    var title = intent.extras['android.intent.extra.TITLE'];
-
-    EventHive.publish('note.receive_new', { title: title, content: text.join('<br>') });
+    EventHive.publish('note.receive_new', { title: title, content: content });
   }
   else if (intent.type.startsWith('image/')) {
     EventHive.publish('spinner.toggle', { show: true });
