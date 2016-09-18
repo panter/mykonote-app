@@ -20,7 +20,7 @@ ShareTo.prototype.handleIntent = function(intent) {
     var title = intent.extras['android.intent.extra.SUBJECT'];
     var content = intent.extras['android.intent.extra.TEXT'];
 
-    EventHive.publish('note.receive_new', { title: title, content: content });
+    EventHive.publish('note.create', { title: title, content: content });
   }
   else if (intent.type.startsWith('image/')) {
     EventHive.publish('spinner.toggle', { show: true });
@@ -32,7 +32,7 @@ ShareTo.prototype.handleIntent = function(intent) {
           function(data) {
             var image = '<img src="data:' + item.type + ';base64,' + data.imageData + '" />';
 
-            EventHive.publish('note.receive_new', { content: image });
+            EventHive.publish('note.create', { content: image });
             EventHive.publish('spinner.toggle', { show: false });
             NoticeFlash.show(
               'The image was scaled down to ' +
