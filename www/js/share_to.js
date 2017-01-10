@@ -9,7 +9,7 @@ ShareTo.prototype.listen = function() {
   window.plugins.intent.getCordovaIntent(function (intent) {
     this.handleIntent(intent);
   }.bind(this));
-}
+};
 
 ShareTo.prototype.handleIntent = function(intent) {
   if (intent.action !== 'android.intent.action.SEND') {
@@ -50,4 +50,4 @@ ShareTo.prototype.handleIntent = function(intent) {
       });
     });
   }
-}
+};
