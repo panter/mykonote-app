@@ -1,8 +1,7 @@
 # Mykonote mobile app
 
-![list view](screenshot1.jpg)
-
-![edit view](screenshot2.jpg)
+![list view](screenshot1.png)
+![edit view](screenshot2.png)
 
 The note taking app that doesn't suck. Made under the Mykonian sun.
 
