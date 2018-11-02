@@ -10,13 +10,5 @@ ant-gen
 # Eclipse builds
 gen
 out
-
-cordova/node_modules
-/assets
-/.gradle
-
-# plugins
-platform_www/plugins
-src/com/napolitano/
-src/com/raananws/
-src/org/apache
+# Gradle builds
+/build

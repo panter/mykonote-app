@@ -1,0 +1,22 @@
+{
+  "name": "com.mykonote",
+  "version": "0.2.0",
+  "displayName": "Mykonote",
+  "cordova": {
+    "platforms": [],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-image-resizer": {},
+      "com.napolitano.cordova.plugin.intent": {}
+    }
+  },
+  "dependencies": {
+    "cordova": "^8.1.2",
+    "cordova-android": "^7.1.1",
+    "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-image-resizer": "^1.0.0",
+    "cordova-plugin-intent": "git+https://github.com/napolitano/cordova-plugin-intent.git#v0.1.31",
+    "cordova-plugin-whitelist": "1"
+  }
+}

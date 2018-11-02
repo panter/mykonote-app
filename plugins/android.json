@@ -1,28 +1,24 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.mykonote"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.mykonote"
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.mykonote"
-        },
-        "com.napolitano.cordova.plugin.intent": {
-            "PACKAGE_NAME": "com.mykonote"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.mykonote"
-        },
-        "cordova-plugin-image-resizer": {
-            "PACKAGE_NAME": "com.mykonote"
-        }
+    "cordova-plugin-image-resizer": {
+      "PACKAGE_NAME": "com.mykonote"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.mykonote"
-        }
+    "com.napolitano.cordova.plugin.intent": {
+      "PACKAGE_NAME": "com.mykonote"
     }
+  },
+  "dependent_plugins": {}
 }

@@ -3,3 +3,9 @@
 
 # plugins
 /plugins
+
+node_modules
+/.gradle
+/platforms/android/CordovaLib
+/platforms/android/.gradle/
+/platforms/android/platform_www/plugins/
