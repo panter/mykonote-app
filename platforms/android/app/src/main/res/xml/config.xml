@@ -45,6 +45,6 @@
     <splash density="port-xhdpi" src="res/android/splash/drawable-port-xhdpi-screen.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="AutoHideSplashScreen" value="false" />
     <preference name="AndroidLaunchMode" value="singleInstance" />
 </widget>

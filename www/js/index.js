@@ -31,6 +31,8 @@ var app = {
   onDeviceReady: function() {
     new ShareTo().listen();
 
+    navigator.splashscreen.hide();
+
     this.receivedEvent('deviceready');
   },
 
