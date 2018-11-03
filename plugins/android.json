@@ -18,6 +18,9 @@
     },
     "com.napolitano.cordova.plugin.intent": {
       "PACKAGE_NAME": "com.mykonote"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.mykonote"
     }
   },
   "dependent_plugins": {}

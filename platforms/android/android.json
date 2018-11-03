@@ -27,6 +27,10 @@
             {
               "xml": "<feature name=\"IntentPlugin\"><param name=\"android-package\" value=\"com.napolitano.cordova.plugin.intent.IntentPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -54,6 +58,9 @@
       "PACKAGE_NAME": "com.mykonote"
     },
     "com.napolitano.cordova.plugin.intent": {
+      "PACKAGE_NAME": "com.mykonote"
+    },
+    "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.mykonote"
     }
   },
@@ -247,12 +254,21 @@
       "clobbers": [
         "IntentPlugin"
       ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-image-resizer": "1.0.0",
-    "com.napolitano.cordova.plugin.intent": "0.1.3"
+    "com.napolitano.cordova.plugin.intent": "0.1.3",
+    "cordova-plugin-splashscreen": "5.0.2"
   }
 }

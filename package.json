@@ -8,7 +8,8 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-file": {},
       "cordova-plugin-image-resizer": {},
-      "com.napolitano.cordova.plugin.intent": {}
+      "com.napolitano.cordova.plugin.intent": {},
+      "cordova-plugin-splashscreen": {}
     }
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-image-resizer": "^1.0.0",
     "cordova-plugin-intent": "git+https://github.com/napolitano/cordova-plugin-intent.git#v0.1.31",
+    "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "1"
   }
 }
