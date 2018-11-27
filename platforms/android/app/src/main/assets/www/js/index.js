@@ -20,6 +20,7 @@ var app = {
   // Application Constructor
   initialize: function() {
     window.API_HOST = 'https://app.mykonote.com';
+    window.ALWAYS_REMEMBER_ME = true;
 
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
@@ -31,24 +32,10 @@ var app = {
   onDeviceReady: function() {
     new ShareTo().listen();
 
-    $('#user_remember_me').parents('.form-group').hide();
-
     navigator.splashscreen.hide();
 
     this.receivedEvent('deviceready');
   },
-
-  // Update DOM on a Received Event
-  receivedEvent: function(id) {
-    var parentElement = document.getElementById(id);
-    var listeningElement = parentElement.querySelector('.listening');
-    var receivedElement = parentElement.querySelector('.received');
-
-    listeningElement.setAttribute('style', 'display:none;');
-    receivedElement.setAttribute('style', 'display:block;');
-
-    console.log('Received Event: ' + id);
-  }
 };
 
 app.initialize();
