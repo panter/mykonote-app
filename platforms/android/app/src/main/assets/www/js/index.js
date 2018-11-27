@@ -31,6 +31,8 @@ var app = {
   onDeviceReady: function() {
     new ShareTo().listen();
 
+    $('#user_remember_me').parents('.form-group').hide();
+
     navigator.splashscreen.hide();
 
     this.receivedEvent('deviceready');
