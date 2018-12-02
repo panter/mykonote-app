@@ -1,0 +1,87 @@
+#!/bin/sh
+
+help() {
+  echo "Usage: test-variant <command>"
+  echo "    build            Creates a build"
+  echo "    emulator         Runs the app in the emulator"
+  echo "    device           Runs the app on the device"
+  echo "    -h | --help      Print this help"
+
+  exit 1
+}
+
+ID_PROD='"com\.mykonote"'
+ID_TEST='"com\.mykonote\.test"'
+NAME_PROD='>Mykonote<'
+NAME_TEST='>Mykonote \[TEST\]<'
+
+if ! [ -f "./.env" ]; then
+  echo "You need to create the file '.env'. You can copy it from '.env.example'" >&2
+  exit 1
+fi
+
+source ./.env
+
+if ! [ -n "$URL_PROD" ] || ! [ -n "$URL_TEST" ]; then
+  echo "You need to set and export the variables 'URL_PROD' and 'URL_TEST' in the '.env' file" >&2
+  exit 1
+fi
+
+URL_PROD=$(echo $URL_PROD | sed -e 's/[\/&]/\\&/g')
+URL_TEST=$(echo $URL_TEST | sed -e 's/[\/&]/\\&/g')
+
+set_test_variant() {
+  sed -i "s/$ID_PROD/$ID_TEST/" config.xml
+
+  sed -i "s/$NAME_PROD/$NAME_TEST/" config.xml
+
+  sed -i "s/$URL_PROD/$URL_TEST/" www/js/index.js
+}
+
+unset_test_variant() {
+  sed -i "s/$ID_TEST/$ID_PROD/" config.xml
+  sed -i "s/$ID_TEST/$ID_PROD/" platforms/android/app/src/main/res/xml/config.xml
+  sed -i "s/$ID_TEST/$ID_PROD/" platforms/android/app/src/main/AndroidManifest.xml
+
+  sed -i "s/$NAME_TEST/$NAME_PROD/" config.xml
+  sed -i "s/$NAME_TEST/$NAME_PROD/" platforms/android/app/src/main/res/xml/config.xml
+  sed -i "s/$NAME_TEST/$NAME_PROD/" platforms/android/app/src/main/res/values/strings.xml
+
+  sed -i "s/$URL_TEST/$URL_PROD/" www/js/index.js
+  sed -i "s/$URL_TEST/$URL_PROD/" platforms/android/app/src/main/assets/www/js/index.js
+
+  git co platforms/android/app/src/main/java/com/mykonote/MainActivity.java
+  rm -rf platforms/android/app/src/main/java/com/mykonote/test/
+}
+
+build() {
+  set_test_variant
+  cordova build
+  unset_test_variant
+}
+
+emulator() {
+  set_test_variant
+  cordova emulate android
+  unset_test_variant
+}
+
+device() {
+  set_test_variant
+  cordova run --device
+  unset_test_variant
+}
+
+if ! [ -n "$1" ]; then
+  help
+fi
+
+while true; do
+  case "$1" in
+    build )        build; shift ;;
+    emulator )     emulator; shift ;;
+    device )       device; shift ;;
+    -h | --help )  help; shift ;;
+    * )            break ;;
+  esac
+done

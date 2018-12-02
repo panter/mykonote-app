@@ -1,0 +1,25 @@
+#!/bin/sh
+
+help() {
+  echo "Usage: production-variant <command>"
+  echo "    build            Creates a build"
+  echo "    -h | --help      Print this help"
+
+  exit 1
+}
+
+ build() {
+   cordova build android --release --buildConfig=build.json
+ }
+
+if ! [ -n "$1" ]; then
+  help
+fi
+
+while true; do
+  case "$1" in
+    build )        build; shift ;;
+    -h | --help )  help; shift ;;
+    * )            break ;;
+  esac
+done

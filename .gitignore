@@ -9,3 +9,7 @@ node_modules
 /platforms/android/CordovaLib
 /platforms/android/.gradle/
 /platforms/android/platform_www/plugins/
+/platforms/android/release-signing.properties
+
+.env
+build.json

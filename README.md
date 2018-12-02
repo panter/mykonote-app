@@ -51,11 +51,18 @@ Also see [the main Mykonote web application](https://github.com/panter/mykonote)
 To get the application started the following steps are required.
 
 * [Install Cordova](https://cordova.apache.org/docs/en/latest/guide/cli/index.html)
+* `cp .env.example .env` and fill in some values
+* `cp build.json.example build.json` and fill in some values
 
 The main JavaScript and CSS files are from [the main Mykonote web
 application](https://github.com/panter/mykonote).  To update them invoke `rake
 mobile:copy` within [the main Mykonote web
 application](https://github.com/panter/mykonote).
+
+### Build scripts
+
+Theare are 2 scripts `bin/production-variant` and `bin/test-variant` that help
+building the application and deploying to an emulator or a device.
 
 ## Links
 
