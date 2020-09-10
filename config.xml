@@ -31,11 +31,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <plugin name="cordova-plugin-image-resizer" spec="^1.0.0" />
-    <plugin name="com.napolitano.cordova.plugin.intent" spec="https://github.com/napolitano/cordova-plugin-intent#v0.1.31" />
-    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <preference name="AutoHideSplashScreen" value="false" />
+    <plugin name="cordova-plugin-file" spec="^6.0.2" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-image-resizer" spec="^1.0.0" />
+    <plugin name="com.napolitano.cordova.plugin.intent" spec="git+https://github.com/napolitano/cordova-plugin-intent.git#v0.1.31" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.4" />
 </widget>
